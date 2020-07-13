@@ -12,6 +12,6 @@ public class Wendigoism implements ModInitializer {
 	public void onInitialize() {
 		ConfigManager.loadConfig(WDConfig.class);
 		WDItems.init();
-		WDEntityTypes.init();
+		new WDEntityTypes();
 	}
 }

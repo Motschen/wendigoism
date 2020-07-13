@@ -6,7 +6,7 @@
   ],
   "key": {
 	"M": {
-	  "tag": "minecraft:stone_tool_materials"
+	  "item": "minecraft:cobblestone"
 	},
 	"S": {
 	  "item": "minecraft:stick"

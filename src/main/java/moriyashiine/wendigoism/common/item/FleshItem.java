@@ -82,7 +82,7 @@ public class FleshItem extends Item {
 		}
 		Random random = world.random;
 		if (random.nextFloat() < chance) {
-			WendigoEntity wendigo = WDEntityTypes.WENDIGO.create(world);
+			WendigoEntity wendigo = (WendigoEntity) WDEntityTypes.WENDIGO.create(world);
 			if (wendigo != null) {
 				boolean valid = false;
 				BlockPos pos = target.getBlockPos();

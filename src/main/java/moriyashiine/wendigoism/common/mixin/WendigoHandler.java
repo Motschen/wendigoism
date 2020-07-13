@@ -220,7 +220,7 @@ public abstract class WendigoHandler extends Entity implements WendigoAccessor {
 	@Mixin(ServerPlayerEntity.class)
 	private static abstract class Server extends PlayerEntity implements WendigoAccessor {
 		public Server(World world, BlockPos blockPos, GameProfile gameProfile) {
-			super(world, blockPos, gameProfile);
+			super(world, gameProfile);
 		}
 		
 		@Inject(method = "copyFrom", at = @At("TAIL"))

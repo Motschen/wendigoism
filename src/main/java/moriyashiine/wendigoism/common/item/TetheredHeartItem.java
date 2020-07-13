@@ -5,6 +5,7 @@ import moriyashiine.wendigoism.common.misc.WendigoAccessor;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.text.LiteralText;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
@@ -24,14 +25,14 @@ public class TetheredHeartItem extends Item {
 		if (!wendigoAccessor.getTethered()) {
 			wendigoAccessor.setTethered(true);
 			if (!world.isClient) {
-				user.sendMessage(new TranslatableText("message." + Wendigoism.MODID + ".tether"), false);
+				user.addChatMessage(new TranslatableText("message." + Wendigoism.MODID + ".tether"), false);
 			}
 			stack.decrement(1);
 			result = new TypedActionResult<>(ActionResult.SUCCESS, stack);
 		}
 		else {
 			if (!world.isClient) {
-				user.sendMessage(new TranslatableText("message." + Wendigoism.MODID + ".tethered"), false);
+				user.addChatMessage(new TranslatableText("message." + Wendigoism.MODID + ".tethered"), false);
 			}
 			result = new TypedActionResult<>(ActionResult.FAIL, stack);
 		}
